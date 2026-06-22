@@ -19,6 +19,10 @@
   },
   "homepage": "https://github.com/RomuloMoraes/cypress-pom-project#readme",
   "devDependencies": {
-    "cypress": "^15.17.0"
+    "@eslint/js": "^10.0.1",
+    "cypress": "^15.17.0",
+    "eslint": "^10.5.0",
+    "eslint-plugin-cypress": "^6.4.1",
+    "globals": "^17.7.0"
   }
 }
