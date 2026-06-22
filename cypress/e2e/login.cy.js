@@ -9,7 +9,7 @@ describe('Login', () => {
   })
 
 
-  it('Should not login invalid user', () => {
+  it('Should not login invalid credentials', () => {
     LoginPage.visit()
     LoginPage.login('cliente1000@teste.com', 'teste')
     LoginPage.validateAlertMessage('×Email e/ou senha inválidos')

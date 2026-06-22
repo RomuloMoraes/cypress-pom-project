@@ -23,6 +23,7 @@
     "cypress": "^15.17.0",
     "eslint": "^10.5.0",
     "eslint-plugin-cypress": "^6.4.1",
-    "globals": "^17.7.0"
+    "globals": "^17.7.0",
+    "mochawesome": "^7.1.4"
   }
 }
