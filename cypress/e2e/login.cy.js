@@ -3,8 +3,24 @@ import LoginPage from '../pages/LoginPages'
 describe('Login', () => {
 
   it('Should login successfully', () => {
+
+    const user = {
+      nome: 'Usuario Teste',
+      email: `usuario${Date.now()}@teste.com`,
+      password: 'teste',
+      administrador: 'false'
+    }
+
+    cy.request({
+      method: 'POST',
+      url: 'https://serverest.dev/usuarios',
+      body: user
+    }).then((response) => {
+      expect(response.status).to.eq(201)
+    })
+
     LoginPage.visit()
-    LoginPage.login('cliente01@teste.com', 'teste')
+    LoginPage.login(user.email, user.password)
     LoginPage.validateHomeTitle('Serverest Store')
   })
 
