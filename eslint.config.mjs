@@ -4,6 +4,14 @@ import { defineConfig } from "eslint/config";
 
 export default defineConfig([
   {
+    ignores: [
+      "node_modules/**",
+      "cypress/reports/**",
+      "cypress/screenshots/**",
+      "cypress/videos/**",
+    ],
+  },
+  {
     files: ["**/*.{js,mjs,cjs}"],
 
     plugins: {
@@ -17,7 +25,6 @@ export default defineConfig([
         ...globals.browser,
         ...globals.node,
 
-        // Cypress
         cy: "readonly",
         Cypress: "readonly",
         describe: "readonly",
