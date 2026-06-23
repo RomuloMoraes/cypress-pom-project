@@ -1,4 +1,4 @@
-import LoginPage from '../pages/LoginPages'
+import LoginPage from '../pages/LoginPage'
 
 describe('Login', () => {
 
